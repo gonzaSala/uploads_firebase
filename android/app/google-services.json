@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "297737897289",
+    "project_id": "test-subirimg",
+    "storage_bucket": "test-subirimg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297737897289:android:d2f35d6b4c99c80a3bc698",
+        "android_client_info": {
+          "package_name": "com.gonzaSala.uploads_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxcXB00KJN2xyuVptIfkmTa5ww_3Zabi8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:uploads_firebase/home_page.dart';
 
 void main() => runApp(const MyApp());
