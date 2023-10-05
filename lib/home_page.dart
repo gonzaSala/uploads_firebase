@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:uploads_firebase/services/select_img.dart';
+import 'package:uploads_firebase/services/upload_img.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -40,7 +41,24 @@ class _HomePageState extends State<HomePage> {
                 });
               },
               child: const Text('Seleccionar imagen')),
-          ElevatedButton(onPressed: () {}, child: const Text('Subir imagen')),
+          ElevatedButton(
+              onPressed: () async {
+                if (imageToUpload == null) {
+                  return;
+                }
+
+                final uploaded = await uploadImg(imageToUpload!);
+
+                if (uploaded) {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text('Imagen subida correctamente!')));
+                } else {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text('No se pudo subir la imagen')));
+                }
+                ;
+              },
+              child: const Text('Subir imagen')),
         ],
       ),
     );
